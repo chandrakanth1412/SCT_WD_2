@@ -1,0 +1,106 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.display {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    font-family: monospace; /* For fixed-width numbers */
+}
+
+.buttons {
+    margin: 1rem 0;
+}
+
+button {
+    padding: 0.75rem 1.5rem;
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#startPauseBtn {
+    background: #4CAF50; /* Green for start */
+    color: white;
+}
+
+#startPauseBtn.running {
+    background: #FF9800; /* Orange for pause */
+}
+
+#resetBtn {
+    background: #f44336; /* Red */
+    color: white;
+}
+
+#lapBtn {
+    background: #2196F3; /* Blue */
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.lap-history {
+    margin-top: 2rem;
+    text-align: left;
+}
+
+#lapList {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto; /* Scrollable if many laps */
+    padding: 0;
+}
+
+#lapList li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Responsiveness: Mobile Styles */
+@media (max-width: 480px) {
+    .display {
+        font-size: 2rem;
+    }
+    button {
+        padding: 0.5rem 1rem;
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
